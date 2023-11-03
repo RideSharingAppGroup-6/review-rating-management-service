@@ -9,13 +9,12 @@ import jakarta.persistence.ManyToOne;
 public class Review extends BaseModel {
 
     private String comment;
-    @ManyToOne
-    @JoinColumn(name = "ride_id")
-    private Ride ride;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    private Long rideId;
+
+    private Long userId;
+
+    private Long driverId;
 
     @Enumerated
     private Rating rating;
